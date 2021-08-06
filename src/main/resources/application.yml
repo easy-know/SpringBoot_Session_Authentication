@@ -1,0 +1,33 @@
+server:
+  port: 1455
+  servlet:
+    context-path: 
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  jpa:
+    hibernate:
+      format_sql: true
+      ddl-auto: create  # application 실행 시점에 entity 지우고 다시 시작
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+#        show_sql: true  # system.out.print로 출력
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/intellij-workspace/jpa_board/H2/demo
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    main:
+      allow-bean-definition-overriding: true
+#  logging.level:
+#    org.hibernate.SQL: debug  # 쿼리 logging으로 출력
+#    org.hibernate.type: trace  # 쿼리 파라미터 log 남기기

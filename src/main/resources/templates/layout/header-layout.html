@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<!-- footer content -->
+<header th:fragment="headerFragment">
+    <div class="container-fluid py-2 bg-dark">
+        <div class="row justify-content-between">
+            <div class="col-auto mr-auto">
+                <a id="main" th:href="@{/}">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+                         viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0"
+                                                                                                             width="16"
+                                                                                                             height="16"
+                                                                                                             x="0" y="0"
+                                                                                                             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAElBMVEX////fAAD/pR8Anz8A
+Wd////9znfsFAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBx4SAA3pqNeOAAAA
+NElEQVQI12NgYBQEAgEGBgSDgYFJgYEBg2GMi6FsjMxgcYBKITOACMRwcXFxACsFMhiwAgC2BgbN
+NeF6YQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNy0zMFQxODowMDoxMyswMzowMCrrVQsAAAAl
+dEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDctMzBUMTg6MDA6MTMrMDM6MDBbtu23AAAAAElFTkSuQmCC"/>
+</svg>
+                </a>
+            </div>
+            <div class="col-auto">
+                <a id="login_btn" class="btn btn-primary" th:href="@{/sign-in}">Sign-In</a>
+                <a id="sign_up_btn" class="btn btn-secondary" th:href="@{/sign-up}">Sign-Up</a>
+            </div>
+        </div>
+    </div>
+</header>
+</html>

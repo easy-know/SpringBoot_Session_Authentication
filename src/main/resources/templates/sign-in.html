@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/default-layout}">
+<div layout:fragment="content">
+    <div class="container py-5">
+        <div class="row py-3 justify-content-center">
+            <div class="col-10">
+                <h2>로그인을 해주세요</h2>
+            </div>
+        </div>
+        <div class="row py-3 justify-content-center">
+            <div class="col-10">
+                <form id="sign_in_form" class="col-6 needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">이메일</label>
+                        <input type="email" class="form-control p-3" id="email" name="email" placeholder="test@example.com" required>
+                        <div class="invalid-feedback">
+                            이메일을 입력하세요.
+                        </div>
+                    </div>
+                    <div class="mb-5">
+                        <label class="form-label" for="password">비밀번호</label>
+                        <input type="password" class="form-control p-3" id="password" name="password" placeholder="비밀번호를 입력하세요." required>
+                        <div class="invalid-feedback">
+                            비밀번호를 입력하세요.
+                        </div>
+                    </div>
+                    <div class="d-grid mx-auto">
+                        <button id="btn_sign_up" type="submit" class="btn btn-success">로그인</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('#sign_in_form')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    </script>
+</html>
